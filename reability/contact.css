@@ -1,0 +1,11 @@
+
+a.email {
+    display: block;
+    font-family: 'Cagliostro', sans-serif;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    font-size: 40px;
+    color: #333;
+    text-shadow: 0 0 3px #c22;
+}

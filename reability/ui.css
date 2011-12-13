@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Cagliostro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cagliostro Regular'), local('Cagliostro-Regular'), url('cagliostro.woff') format('woff');
+}
+
+.photo-wraper {
+    border: 1px solid #a30a0a;
+    display: block;
+    width: 195px;
+    height: 195px;
+    float: left;
+    -webkit-box-shadow: 0 0 3px #c22;
+    -moz-box-shadow: 0 0 3px #c22;
+}
+.photo-wraper:hover {
+}

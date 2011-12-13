@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>XXX的主页</title>
+    <link media="all" rel="stylesheet" href="ui.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="normalize.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="base.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="home.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="interests.css" type="text/css" />
+    <script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1>阿斯顿·凡</h1>
+                <b></b>
+            </div>
+            <ul class="nav">
+                <li>
+                	<a href="home.html">about</a>
+                </li>
+                <li>
+                	<a href="schedule.html">schedule</a>
+                </li>
+                <li>
+                	<a href="interests.html" class="focus" >interests</a>
+                </li>
+                <li>
+                	<a href="contact.html">contact</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="main">
+            <div class="interests">
+                <a href="#" class="item" style="left:400px;top:50px;font-size:15px;">ACG</a>
+
+                <a href="#" class="item" style="left:120px;top:30px;font-size:22px;">Sports</a>
+
+                <a href="#" class="item" style="left:60px;top:160px;font-size:18px;">Web Design</a>
+
+                <a href="#" class="item" style="left:360px;top:190px;font-size:20px;">Programming</a>
+
+                <a href="#" class="item" style="left:200px;top:100px;font-size:30px;">Literature</a>
+            </div>
+
+            <div id="show_acg" class="show">
+                <a href="#" class="close">x</a>
+                <img src="acg.jpg" alt="" />
+            </div>
+            <div id="show_sports" class="show">
+                <a href="#" class="close">x</a>
+            </div>
+            <div id="show_webdesign" class="show">
+                <a href="#" class="close">x</a>
+                <img src="webdesign.png" alt="" />
+            </div>
+            <div id="show_programming" class="show">
+                <a href="#" class="close">x</a>
+                4
+            </div>
+            <div id="show_literature" class="show">
+                <a href="#" class="close">x</a>
+                <img src="literature.png" alt="" />
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="title">
+                <span>友情链接</span>
+            </div>
+            <div class="clearfix"></div>
+            <ul>
+            	<li>
+            		<a href="http://www.google.com">Google</a>
+            	</li>
+            	<li>
+            		<a href="http://www.pinboard.in">Pinboard</a>
+            	</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            var show_up = function (t) {
+                $('.interests').fadeOut(function () {
+                    var id = '#' + 'show_' + t;
+                    $(id).fadeIn();
+                });
+            }
+            var show_down = function (o) {
+                o.fadeOut(function () {
+                    $('.interests').fadeIn();
+                });
+            }
+            $('.main .item').each(function () {
+                $this = $(this);
+                var inte = $this.html();
+                switch (inte) {
+                    case 'ACG':
+                        $this.click(function () {
+                            show_up('acg');
+                            return false;
+                        });
+                        break
+                    case 'Sports':
+                        $this.click(function () {
+                            show_up('sports');
+                            return false;
+                        });
+                        break
+                    case 'Web Design':
+                        $this.click(function () {
+                            show_up('webdesign');
+                            return false;
+                        });
+                        break
+                    case 'Programming':
+                        $this.click(function () {
+                            show_up('programming');
+                            return false;
+                        });
+                        break
+                    case 'Literature':
+                        $this.click(function () {
+                            show_up('literature');
+                            return false;
+                        });
+                        break
+                }
+            });
+            $('.show .close').click(function () {
+                show_down($(this).parent());
+                return false;
+            });
+        });
+    </script>
+
+</body>
+</html>

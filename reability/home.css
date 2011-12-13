@@ -1,0 +1,120 @@
+
+
+body > .container {
+    background: white;
+    border-left: 3px solid #F1F1F1;
+    border-right: 3px solid #F1F1F1;
+    color: #333;
+    padding: 10px 40px;
+    height: 4000px;
+}
+
+.header > .title {
+    position: relative;
+}
+.header .title h1 {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    color: #444;
+}
+.header .title b {
+    position: absolute;
+    top: 18px;
+    left: 130px;
+    width: 320px;
+    height: 1px;
+    background: #c22;
+    z-index: 0;
+}
+
+.container ul::before, .container ul::after {
+    display: table;
+    content: "";
+    zoom: 1;
+}
+.container ul.nav {
+    margin-top: 30px;
+    margin-left: 20px;
+    height: 40px;
+}
+.container ul.nav > li {
+    display: inline;
+    padding: 0 20px;
+    list-style: none;
+}
+.container ul.nav > li a {
+    color: #c22;
+    font-family: 'Cagliostro', sans-serif;
+    font-size: 22px;
+}
+.container ul.nav > li a:hover {
+    color: #b00;
+}
+.container ul.nav > li a.focus {
+    color: #b22;
+    border-bottom: 4px solid #c22;
+}
+
+
+.main {
+    margin-top: 60px;
+    font-size: 12px;
+}
+.photo-wraper {
+    margin: 0 20px 15px 0;
+    padding: 5px;
+}
+.main .photo img {
+    width: 195px;
+    height: 195px;
+}
+
+
+.footer {
+    margin-top: 80px;
+}
+.footer .title,
+.footer .title span {
+    height: 20px;
+    line-height: 20px;
+}
+.footer .title,
+.footer > ul {
+    width: 200px;
+}
+.footer .title {
+    float: right;
+    border-bottom: 1px solid #c22;
+}
+.footer .title span {
+    display: block;
+    float: right;
+    width: 60px;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 0 5px;
+    background: #c22;
+}
+.footer > h6 {
+}
+.footer > ul {
+    float: right;
+}
+.footer > ul li {
+    list-style: dot;
+    margin-top: 10px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+.footer > ul li a {
+    color: #444;
+}
+.footer > ul li a:hover {
+    color: #b22;
+}
